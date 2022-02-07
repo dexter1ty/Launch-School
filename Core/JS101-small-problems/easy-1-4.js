@@ -10,8 +10,27 @@ Do not worry about validating the input at this time. Use the readlineSync.promp
 
 let userInput = require('readline-sync');
 
-const length = userInput.question("Enter the length of the room in meters:\n");
-const width = userInput.question("Enter the width of the room in meters:\n");
+let feetOrMeters = userInput.question("meters or feet? :\n");
+
+if(feetOrMeters !== 'meters' && feetOrMeters !== 'feet'){ 
+  console.log(`Please be sure to write "meters' "or feet" (you wrote ${feetOrMeters})`);
+} else {
+  let length = userInput.question("Enter the length of the room:\n");
+  length = parseInt(length,10);
+
+  let width = userInput.question("Enter the width of the room:\n");
+  width = parseInt(width,10);
+
+  let areaMeters = length * width;
+  let areaFeet = areaMeters * 10.7639;
+
+  if(feetOrMeters.toLowerCase() === 'meters') {
+    console.log(`The area of the room is ${areaMeters.toFixed(2)} square meters (${areaFeet.toFixed(2)} square feet).`);
+  } else {
+    console.log(`The area of the room is ${areaFeet.toFixed(2)} square feet (${areaMeters.toFixed(2)} square meters).`);
+  } 
+}
+
 
 
 
