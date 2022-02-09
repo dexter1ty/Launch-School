@@ -1,10 +1,19 @@
-userInput = require('readline-sync');
+const readline = require('readline-sync');
 
-console.log("Welcome to the Calculator!");
+function prompt(text) {
+  console.log(`=> ${text}`);
+}
 
-let num1 = userInput.question("Tell me the 1st number\n");
-let num2 = userInput.question("Tell me the 2nd number\n");
-let operation = userInput.question("What operation would you like to perform?\n1) Add 2) Substract 3) Multiply 4) Divide\n");
+
+prompt("Welcome to the Calculator!");
+
+prompt("Tell me the 1st number");
+let num1 = readline.question();
+
+prompt("Tell me the 2nd number");
+let num2 = readline.question();
+
+let operation = readline.question("What operation would you like to perform?\n1) Add 2) Substract 3) Multiply 4) Divide\n");
 let result;
 
 switch (operation) {
