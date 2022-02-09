@@ -1,0 +1,131 @@
+1) function that returns the sum of two numbers
+
+Casual:
+
+- given 2 numbers
+- Assign the numbers to variables
+- add the 2 numbers
+- return the result
+
+Formal:
+
+START
+
+=== Given two numbers ===
+SET num1 = 1st parameter
+SET num2 = 2nd parameter
+SET sum = num1 + num2
+return sum
+
+END
+
+2) function that takes an array of strings, and returns a string that is all those strings concatenated together
+
+Casual:
+
+- given a collection of strings in an array
+- set a result variable to store the output string
+- iterate over the array and concatenate current value to result variable
+- return the variable string
+
+Formal:
+
+START
+=== given a collection of numbers stored in an array called "strings" ===
+SET result
+SET iterator = 0
+WHILE iterator < strings length
+concatenate value within strings collection at space iteration to result variable
+return result
+END
+
+3) a method that takes an array of integers, and returns a new array with every other element from the original array, starting with the first element.
+
+Casual
+
+given a collection of numbers
+set newArr that will store the values
+set iterator = 0
+iterate over collection with iterator
+iterator += 2
+return newArr
+
+Formal
+
+START 
+=== given a collection of numbers called "numbers" ===
+START
+SET newArr
+SET iterator
+WHILE iterator < numbers length
+newArr[iterator] = current numbers value in the loop
+iterator += 2
+return newArr
+END
+
+4) a function that determines the index of the 3rd occurrence of a given character in a string.
+
+Casual:
+
+given a character and a string
+set occurrences variable as the number of occurences of the character in the string
+set character as the given character
+set str as the given string
+set index as the found index
+iterate through the characters of the string and add 1 to occurences when the given character is the same as the current character in the string
+if occurences reach 3 use iterator as the index in the array and break the loop
+if index isn't defined return null
+else return index
+
+
+Formal:
+
+START
+=== given a character and a string ===
+SET character as the given character
+SET occurences = 0
+SET index
+SET iterator = 0
+WHILE iterator < string length
+  IF occurences < 2
+    IF the character at the iterator position equals given character then increment occurences
+    ELSE continue
+  ELSE
+    index = iterator
+    break the loop
+IF index = undefined
+  return null
+ELSE
+  return index
+END
+
+5) a function that takes two arrays of numbers and returns the result of merging the arrays.
+ The elements of the first array should become the elements at the even indexes of the returned 
+ array, while the elements of the second array should becoome the elements at the odd indexes.
+ You may assume that both array arguments have the same number of elements.
+
+ Casual
+
+Given 2 collections of numbers
+set array1 as 1st array passed in the function
+set array2 as 2nd array passed in the function
+set newArray as the returned array
+set iterator = 0
+iterate while iterator < given array length
+push array1[iterator] to newArray and push array2[iterator] to newArray
+iterator += 1
+return newArray
+
+Formal
+
+START
+=== Given 2 collections of numbers ===
+SET array1 as 1st array passed in the function 
+SET array2 as 2nd array passed in the function
+SET newArray as the returned array
+SET iterator = 0
+WHILE iterator < array1 length
+  push array1[iterator] to newArray and push array2[iterator] to newArray
+  iterator += 1
+return newArray
+END
