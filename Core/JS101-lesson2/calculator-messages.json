@@ -1,0 +1,11 @@
+{
+  "welcome" : "Welcome to the Calculator!",
+  "num1" : "Tell me the 1st number",
+  "num2" : "Tell me the 2nd number",
+  "notValidNum" : "It's not a valid number. Please enter an integer",
+  "operation" : "What operation would you like to perform?\n1) Add 2) Substract 3) Multiply 4) Divide",
+  "notValidChoice" : "You must choose between 1,2,3 or 4",
+  "result" : "The result is",
+  "another" : "Would you like to perform another calculation? (y/n)",
+  "bye" : "Bye bye!"
+}
