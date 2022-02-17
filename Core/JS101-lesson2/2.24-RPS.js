@@ -37,7 +37,7 @@ while (true) {
 
   prompt(`You chose ${userChoice}, computer chose ${computerChoice}`);
   prompt(`${getWinner(userChoice,computerChoice)}`);
-  prompt("Would you like to play again? (y/n)") 
+  prompt("Would you like to play again? (y/n)");
 
   if (READLINE.question() !== "y") {
     break;
