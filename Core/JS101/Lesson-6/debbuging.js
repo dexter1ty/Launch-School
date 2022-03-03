@@ -1,16 +1,10 @@
-function joinOr(array,delim = ',',finalWord = 'or') {
-  let string = '';
-  for (let i = 0; i < array.length; i += 1) {
-    if(i === array.length - 1){
-      string += ` ${finalWord} ${array[i]}`
-      break;
-    } else if (i === 0) {
-      string += `${array[i]}`;
-    } else {
-    string += `${delim} ${array[i]}`;
-    }
+function shuffle(array) {
+  for (let first = array.length - 1; first > 0; first--) {
+  let second = Math.floor(Math.random() * (first + 1)); // random index from 0 to i
+  [array[first], array[second]] = [array[second], array[first]]; // swap elements
+  console.log(`first: ${array[first]} => second: ${array[second]}`)
   }
-  return string;
+return array;
 }
 
-console.log(joinOr([1,2,3,4,5],',','and'));
+console.log(shuffle([1,2,3,4]));

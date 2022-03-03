@@ -11,7 +11,6 @@ function prompt(msg) {
 }
 
 function initDeckandShuffle() {
-  let card = [];
   let deck = [];
   suits.forEach(suit => {
     values.forEach(value => {
